@@ -1,0 +1,53 @@
+buildscript {
+	repositories {
+		mavenCentral()
+		jcenter()
+		maven { url "http://repo.spring.io/snapshot" }
+		maven { url "http://repo.spring.io/milestone" }
+		maven { url "https://plugins.gradle.org/m2/"}
+	}	
+}
+
+
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+
+
+group = 'com.traning.springboot-rest'
+version = '1.0-SNAPSHOT'
+
+description = "Rest Services"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories {
+	
+ maven { url "http://repo.maven.apache.org/maven2" }
+ maven { url "http://repository.jboss.org/nexus/content/groups/public" }
+ maven { url "http://repository.jboss.org/nexus/content/repositories/deprecated" }
+ maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
+ mavenLocal()
+}
+
+
+
+dependencies {
+	
+	compile group: 'org.springframework', name: 'spring-core', version: '4.3.2.RELEASE'
+	compile group: 'org.springframework', name: 'spring-beans', version: '4.3.2.RELEASE'
+	compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.2.RELEASE'
+	compile group: 'org.springframework', name: 'spring-expression', version: '4.3.2.RELEASE'
+	compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.2.RELEASE'
+	compile group: 'org.springframework', name: 'spring-tx', version: '4.3.2.RELEASE'
+	compile group: 'org.aspectj', name: 'aspectjrt', version: '1.8.9'
+	compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.9'
+	compile group: 'org.springframework', name: 'spring-aspects', version: '4.3.2.RELEASE'
+		
+	compile group: 'mysql', name: 'mysql-connector-java', version:'5.1.36'
+	
+}
